@@ -33,7 +33,7 @@
                             </div>
 
                             <div class=" col-lg-12 text-center mt-5">
-                           <a href="<?php echo BASE_URL ?> ingresar" class="btn btn-primary ">Ingresar</a>
+                           <a href="<?php echo BASE_URL ?>ingresar" class="btn btn-primary ">Ingresar</a>
                            </div>
                         </form>
                     </div>
