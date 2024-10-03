@@ -1,10 +1,10 @@
 <?php
 class vistaModelo{
-protected static function obtener_vitas($vista){
-    $palabras_permitidas = ['login','usuario','producto'];
+protected static function obtener_vistas($vista){
+    $palabras_permitidas = ['inicio','carrito','varones','mujeres','perfil','informacion','niños','niñas','usuario','nuevo-usuario','producto','nuevo-producto'];
     if (in_array($vista,$palabras_permitidas)){
-        if(is_file("./views".$vista.".php")){
-            $contenido = "./views".$vista.".php";
+        if(is_file("./views/".$vista.".php")){
+            $contenido = "./views/".$vista.".php";
 
         } else{
             $contenido ="404";
