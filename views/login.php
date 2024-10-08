@@ -1,47 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
+?>
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="views/style.css">
 </head>
-
-<body style="background-color: rgb(14, 170, 191);" >
-    <div class="container"  >
-       
-        <div class="row justify-content-center mt-5 " >
-           
-            <div class="col-md-4 mt-5" >
-             
-                <div class="card mt-5" style="background-color: rgba(2, 2, 2, 0.721); border-radius: 5%;">
-                    <div class="card-body " style="background-color: rgba(217, 214, 214, 0.721); border-radius: 5%;">
-
-                        <div class="text-center p-3 border-radius:5px"><img src="logo.jpg" alt="" height="80">
-                        </div>
-
-                        <h5 class="card-title text-center">Iniciar Sesión</h5>
-                        <form action="" method="post">
-                            <div class="form-group mt-5">
-                                <label for="username">Nombre de Usuario</label>
-                                <input type="text" class="form-control" id="username" name="username" >
-                            </div>
-                            <div class="form-group mt-5">
-                                <label for="password">Contraseña</label><br>
-                                <input type="password" class="form-control" id="password" name="password" >
-                            </div>
-
-                            <div class=" col-lg-12 text-center mt-5">
-                           <a href="<?php echo BASE_URL ?>inicio" class="btn btn-primary ">Ingresar</a>
-                           </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<body id="body">
+    <div id="contenedor">
+        <div class="imagen-login">
+            <img class="img" src="./views/plantilla/logo.jpg" alt="">
+            <img class="img2" src="./views/plantilla/log.jpg " alt="">
+            
         </div>
-    </div>
+    <form class="login" method="post" action="login.php">
+        <h1>Iniciar Sesión</h1>
+        <img class="usuario" src="img/usuario.png" alt="" width="70px">
+        
+        <input class="imput" type="text" id="username" name="username" placeholder="NOMBRE USUARIO" required>
 
+        
+        <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
+
+        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar</a></button>
+        <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
+    </form>
+</div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
