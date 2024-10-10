@@ -26,7 +26,7 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar</a> </button>
+        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar </button></a>
         
     </form>
 </div>
