@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="views/style.css">
+    <link rel="stylesheet" href="./views/style.css">
 </head>
 <body id="body">
     <div id="contenedor">
@@ -26,8 +26,7 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar </button></a>
-        
+        <button class="boton" type="submit"> <a class="dropdown-item" href="<?php echo BASE_URL ?>inicio">ingresar</a></button>
     </form>
 </div>
 </body>
