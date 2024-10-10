@@ -26,8 +26,8 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar</a></button>
-        <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
+        <a href="<?php echo BASE_URL ?>inicio"><button class="boton" type="submit">ingresar</a> </button>
+        
     </form>
 </div>
 </body>
