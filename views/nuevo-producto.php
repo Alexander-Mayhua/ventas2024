@@ -1,4 +1,4 @@
-<div class="cantainer form-nproduct">
+<div class="cantainer form-nproduct"></div>
     <form action="">
         <p>FORMULARIO DE REGISTRO DE PRODUCTOS</p>
 
@@ -12,19 +12,20 @@
         <input type="text" name="detalle" id="detalle" placeholder="detalle">
 
         <label for="precio">Precio</label>
-        <input type="text" name="precio" id="precio" placeholder="precio">
+        <input type="number" name="precio" id="precio" placeholder="precio">
 
         <label for="stock-inicial">stock Inicial</label>
-        <input type="text" name="stok-inicial" id="stock-inicial" placeholder="stok inicial">
+        <input type="numbre" name="stok-inicial" id="stock-inicial" placeholder="stok inicial">
 
         <label for="categoria">Categoria</label>
-        <input type="text" name="categoria" id="categoria" placeholder="categoria">
+        <input type="number" name="categoria" id="categoria" placeholder="categoria">
 
         <label for="imagen">imagen</label>
         <input type="text" name="imagen" placeholder="imagen">
 
         <label for="proveedor">Proveedor</label>
-        <input type="text" name="proveedor" placeholder="proveedor">
+        <input type="number" name="proveedor" placeholder="proveedor">
 
-</div>
+
 </form>
+<script src="<php echo BASE_URL;?>views/js/functions_productos.js" ></script>
