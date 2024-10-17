@@ -62,8 +62,8 @@
                         </div>
                         <h4>S/ 139.30</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                         </div>
                         <h4>S/ 139.00</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary ">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary ">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                         </div>
                         <h4>S/ 159.00 </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -121,8 +121,8 @@
                         </div>
                         <h4> S/ 132.00</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -144,8 +144,8 @@
                         </div>
                         <h4>S/ 79.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -167,8 +167,8 @@
                         </div>
                         <h4>S/ 209.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASE_URL ?>detalle" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
