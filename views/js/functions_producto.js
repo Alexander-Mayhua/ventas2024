@@ -1,4 +1,4 @@
-console.log ("hola mundo");
+
 async function registrar_producto() {
     let codigo = document.getElementById('codigo').value;
     let nombre = document.querySelector('#nombre').value;
@@ -25,8 +25,31 @@ async function registrar_producto() {
         body:datos
 
     });
-    console.log(respuesta);
+    json = await respuesta.json();
+    if(json.status){
+        swal("Registro",json.mensaje,"success");
+    }else{
+        swal("Registro",json.mensaje,"error");
+    }
+        
+
+    console.log(json);
    } catch (e) {
     console.log("ooops ocurrio un error "+e);
    }
 }
+
+
+/*listar producto */
+
+async function listar_categoria() {
+    try{
+        let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
+
+        console.log(respuesta);
+    }catch(e){
+        console.log("error al cargar categorias"+e);
+    }
+}
+
+

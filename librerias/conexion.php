@@ -1,4 +1,4 @@
-<<?php
+<?php
 require_once "../config/config.php";
 class Conexion{
 public static function connect(){
