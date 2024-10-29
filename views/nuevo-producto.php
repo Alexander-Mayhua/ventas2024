@@ -22,7 +22,10 @@
     </div>
     <div>
         <label for=""> categoria: </label>
-            <input type="number" id="categoria" name="categoria"  class="form-control">
+             <select name="categoria" id="categoria" class="form-control" require >
+                <option>Seleccione</option>
+             </select>
+            
     </div>
     <div>
         <label for=""> imagen: </label>

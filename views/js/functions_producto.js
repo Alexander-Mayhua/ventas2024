@@ -40,12 +40,21 @@ async function registrar_producto() {
 }
 
 
-/*listar producto */
+/*listar categoria */
 
 async function listar_categoria() {
     try{
         let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
-
+         json = await respuesta.json();
+         if(json.status){
+            let datos = json.contenido;
+            datos.forEach(element =>{
+                $('#categoria').append($('<option />'),{
+                    Text: `${element.nombre}`,
+                    value: `${element.id}`
+                    });
+            });
+         }
         console.log(respuesta);
     }catch(e){
         console.log("error al cargar categorias"+e);
