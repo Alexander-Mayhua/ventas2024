@@ -2,7 +2,7 @@
 require_once "../librerias/conexion.php";
 
 
-
+//categoria
 class categoriaModel{
     private $conexion ;
     function __construct()

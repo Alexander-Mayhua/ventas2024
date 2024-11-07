@@ -1,5 +1,6 @@
 <?php
 require_once('../model/categoriaModel.php');
+
 $tipo = $_REQUEST['tipo'];
 //instanciar la clase  categoria model
 
@@ -25,6 +26,7 @@ if ($tipo =="listar"){
    
     echo json_encode($arr_Respuesta);
 }
+
 
 
 ?>

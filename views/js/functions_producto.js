@@ -45,20 +45,50 @@ async function registrar_producto() {
 async function listar_categoria() {
     try{
         let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
-         json = await respuesta.json();
-         if(json.status){
+        json = await respuesta.json();
+        if (json.status){
             let datos = json.contenido;
-            datos.forEach(element =>{
-                $('#categoria').append($('<option />'),{
-                    Text: `${element.nombre}`,
-                    value: `${element.id}`
-                    });
+              // de otra manera 
+              /*let contenido_select ='<option value=">Selecione</option>';
+              datos.forEach(element=>{
+                contenido_select +='<option value"'+element.id + '">'+ element.nombre+ '<option>'; */
+            datos.forEach(element => {
+
+                $('#categoria').append($('<option />',{
+                    text:`${element.nombre}`,
+                    value:` ${element.id}`
+                }));
             });
-         }
+            //document.getElementtByid('categoria').innerHTML=contenido_select;
+
+        }
+      
         console.log(respuesta);
+
     }catch(e){
         console.log("error al cargar categorias"+e);
     }
 }
 
+// listar proveedor
 
+async function listar_proveedor() {
+    try {
+        let respuesta = await fetch(base_url + 'controller/proveedor.php?tipo=listar');
+        let json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            datos.forEach(element => {
+                $('#proveedor').append($('<option />', {
+                    text: `${element.razon_social}`,
+                    value: `${element.id}`
+                }));
+            });
+        }
+
+        console.log(respuesta);
+
+    } catch (e) {
+        console.log("Error al cargar proveedores: " + e);
+    }
+}
