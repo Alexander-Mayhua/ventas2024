@@ -12,13 +12,13 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+
     <div class="container-fluid p-0 row ">
         <nav class="navbar navbar-expand-lg " style="background-color: #08b93a;" data-bs-theme="dark">
-=======
+
     <div class="container-fluid p-0 row m-0">
         <nav class="navbar navbar-expand-lg" style="background-color: #08b93a;" data-bs-theme="dark">
->>>>>>> b2d36b0bf6c8490732ff7d9f67091726ba8781bc
+
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./views/plantilla/logo.jpg" alt="" width="100" height="50" style="border-radius: 10PX;">
