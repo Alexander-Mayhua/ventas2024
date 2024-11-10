@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="container-fluid p-0 row">
-        <nav class="navbar navbar-expand-lg" style="background-color: #08b93a;" data-bs-theme="dark">
+    <div class="container-fluid p-0 row ">
+        <nav class="navbar navbar-expand-lg " style="background-color: #08b93a;" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./views/plantilla/logo.jpg" alt="" width="100" height="50" style="border-radius: 10PX;">

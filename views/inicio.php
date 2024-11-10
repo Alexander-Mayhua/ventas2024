@@ -1,5 +1,5 @@
 
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators ">
                     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
