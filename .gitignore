@@ -1,1 +1,7 @@
 config.php
+assets/img_producto/*.jpg
+assets/img_producto/*.png
+assets/img_producto/*.jpeg
+assets/img_producto/*.avg
+assets/img_producto/*.web
+assets/img_producto/*.ico
