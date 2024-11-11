@@ -3,7 +3,7 @@
 require_once('../model/comprasModel.php');
 $tipo = $_REQUEST['tipo'];
 //instancio la clase modeloproducto
-$objProducto = new comprasModel();
+$objCompra= new comprasModel();
 if ($tipo == "registrar") {
     // imagen
    //  print_r($_POST);
@@ -11,8 +11,8 @@ if ($tipo == "registrar") {
   
 
    if ($_POST) {
-        $producto  = $_POST['codigo'];
-        $cantidad  = $_POST['nombre'];
+        $producto  = $_POST['producto'];
+        $cantidad  = $_POST['cantidad'];
         $precio  = $_POST['precio'];
         $fecha_compra  = $_POST['fecha_compra'];
         $trabajador  = $_POST['trabajador'];

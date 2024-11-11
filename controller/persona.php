@@ -23,7 +23,7 @@ if ($tipo == "registrar") {
         $rol = $_POST['rol'];
         $password = $_POST['password'];
         $estado = $_POST['estado'];
-        $fecha_registro	 = $_POST['fecha_registro	'];
+        $fecha_registro	 = $_POST['fecha_registro'];
 
         if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
         || $codigo_postal==""|| $direccion==""|| $rol==""|| $password==""|| $estado==""|| $fecha_registro=="") {

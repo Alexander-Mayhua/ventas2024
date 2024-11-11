@@ -6,7 +6,7 @@
     </div>
     <div>
         <label for=""> razon_social: </label>
-            <input type="text" id="	razon_social" name="razon_social" class="form-control" >
+            <input type="text" id="razon_social" name="razon_social" class="form-control" >
     </div>
     <div>
         <label for=""> telefono: </label>
@@ -42,7 +42,7 @@
     </div>
     <div>
         <label for=""> password: </label>
-            <input type="text"id="password" name="password" class="form-control" >
+            <input type="password"id="password" name="password" class="form-control" >
     </div>
     <div>
         <label for=""> estado: </label>
@@ -57,6 +57,6 @@
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>
-<script>registrar_persona();</script>
+
 <!--<script>listar_categoria();</script>
 <script>listar_proveedor();</script>-->

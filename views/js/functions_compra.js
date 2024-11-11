@@ -3,7 +3,7 @@ async function registrar_compra() {
     let producto = document.getElementById('producto').value;
     let cantidad = document.querySelector('#cantidad').value;
     let precio = document.querySelector('#precio').value;
-    let fecha_compra = document.querySelector('#fecha-compra').value;
+    let fecha_compra = document.querySelector('#fecha_compra').value;
     let trabajador = document.querySelector('#trabajador').value;
    
 
