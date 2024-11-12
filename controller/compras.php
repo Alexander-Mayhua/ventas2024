@@ -1,5 +1,4 @@
 <?php
-
 require_once('../model/comprasModel.php');
 $tipo = $_REQUEST['tipo'];
 //instancio la clase modeloproducto
@@ -8,7 +7,6 @@ if ($tipo == "registrar") {
     // imagen
    //  print_r($_POST);
     // echo $_FILES['imagen']['name'];
-  
 
    if ($_POST) {
         $producto  = $_POST['producto'];
@@ -41,7 +39,6 @@ if ($tipo == "registrar") {
 
                       */
                      
-
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar compra');
             }
@@ -50,6 +47,4 @@ if ($tipo == "registrar") {
     }
         
 }
-
-
 ?>

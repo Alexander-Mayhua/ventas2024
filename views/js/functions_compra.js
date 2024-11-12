@@ -37,9 +37,7 @@ async function registrar_compra() {
    }
 }
 
-
 /*listar categoria */
-
 async function listar_producto() {
     try{
         let respuesta= await fetch(base_url+'controller/productoListar.php?tipo=listar');
