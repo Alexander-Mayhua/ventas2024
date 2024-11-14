@@ -17,7 +17,8 @@
             <img class="img2" src="./views/plantilla/log.jpg " alt="">
             
         </div>
-    <form class="login" method="post" action="login.php">
+
+    <form class="login" method="post" action="login.php" id="frm_iniciar_sesion">
         <h1>Iniciar Sesión</h1>
         <img class="usuario" src="img/usuario.png" alt="" width="70px">
         
@@ -26,8 +27,9 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-        <button class="boton" type="submit"> <a class="dropdown-item" href="<?php echo BASE_URL ?>inicio">ingresar</a></button>
+        <button class="boton" type="submit"> ingresar</button>
     </form>
+    <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
 </div>
 </body>
 </html>

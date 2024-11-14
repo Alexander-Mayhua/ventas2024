@@ -22,11 +22,14 @@ if ($tipo == "registrar") {
         $direccion = $_POST['direccion'];
         $rol = $_POST['rol'];
         $password = $_POST['password'];
+        
         $estado = $_POST['estado'];
         $fecha_registro	 = $_POST['fecha_registro'];
+        $secure_password=password_hash($password,PASSWORD_DEFAULT);
+       
 
         if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
-        || $codigo_postal==""|| $direccion==""|| $rol==""|| $password==""|| $estado==""|| $fecha_registro=="") {
+        || $codigo_postal==""|| $direccion==""|| $rol==""|| $password_hash==""|| $estado==""|| $fecha_registro=="") {
             //respuesta
             $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
         } else {
