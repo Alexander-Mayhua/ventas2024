@@ -58,8 +58,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 69.90<</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -74,8 +74,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 97.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                             <p class="card-text">¡Las Sandalias tipo capelladas de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos..</p>
                         </div> <h4>S/ 31.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                      
                         </div><h4>S/ 96.90 </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4> S/ 90.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -139,8 +139,8 @@
                             <p class="card-text">Nuestras zapatillas Mickey Mouse están fabricadas con material Poliéster disponible en dos colores para que los más pequeños puedan elegir el que más les guste, son una combinación perfecta de estilo y confort para darle la mejor experiencia en cada paso a los más pequeños de la casa.</p>
                         </div><h4>S/ 96.90 </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -155,8 +155,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 76.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -171,8 +171,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 55.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>

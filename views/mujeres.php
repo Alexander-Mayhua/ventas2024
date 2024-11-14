@@ -58,8 +58,8 @@
                             <p class="card-text">Esta temporada, los Vikky alcanzan nuevas alturas con los Vikky Stacked.Esta nueva edición de la gama PUMA Vikky coloca el inconfundible exterior de caña baja sobre una suela elevada de goma.</p>
                         </div><h4>S/. 200.90  </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                             <p class="card-text">ROLLOUT es un tacón de aguja confeccionado con tela vaquera de moda. Si buscas un toque de estilo que pase fácilmente del día a la noche, ¡este zapato con punta abierta será una forma divertida de comenzar a incorporar mezclilla a tu guardarropa.</p>
                         </div><h4>Por: S/. 349.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -106,8 +106,8 @@
                             <p class="card-text">Inspiradas en el diseño industrial clásico, las botas hasta la rodilla EASTERN presentan detalles de correas con hebillas, remaches y juntas tóricas..</p>
                         </div><h4>Por: S/. 769.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -122,8 +122,8 @@
                             <p class="card-text">Indicado para prácticas deportivas leves y para el día a día, el Tenis Fila Trend 3.0 muestra un diseño minimalista y extremadamente versátil, ideal para la composición de looks casuales y deportivos..</p>
                         </div><h4>S/. 259.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -138,8 +138,8 @@
                             <p class="card-text">La zapatilla gruesa perfecta para el día a día es GLIDER. Con una suela gruesa pero un aspecto elegante e informal, esta zapatilla combina bien con cualquier look y estilo.</p>
                         </div><h4>Por: S/. 399.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -154,8 +154,8 @@
                             <p class="card-text">Celebra el espíritu pionero de la comunidad LGBTQ+ con estas Chuck listas para el Día del Orgullo. Los detalles premium y los detalles del arcoíris hacen todo lo posible para combinar tanto con tu apariencia como con el placer de expresarte.</p>
                         </div><h4>Por: S/. 404.91</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -170,8 +170,8 @@
                             <p class="card-text">La colección CODE llego con su estilo minimalista urbano ideal para todo tipo de outfit y cualquier ocasión. Sigue destacando con tu estilo urbano único.</p>
                         </div><h4>S/. 215.94</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>

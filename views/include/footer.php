@@ -4,15 +4,16 @@
             <img src="./views/plantilla/logo.jpg" alt="" class="w-100 p-4 row" height="350px">
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 p-5 ">
-            <a href="informacion.html" style="text-decoration: none;">
-                <h4 style="color: #000;"> <img class="" src="logos/ubicacion.png" alt="" height="30px">Ubicacion</h4>
-            </a>
+            
+            <a href="<?php echo BASE_URL ?>informacion" class="" src="./plantilla/logos/ubicacion.png"  style="text-decoration: none;"> <h4 style="color: #000;"> <img class="" src="logos/ubicacion.png" alt="" height="30px">Ubicacion</h4> </a>
+          
             <p class="text-center">Jr. Oswaldo N. Regal N° 278, Huanta 05121</p>
             <h4> <img class="" src="logos/telefono.png" alt="" height="30px"> Telefono:</h4>
             <p class="text-center">902345423</p>
             <a href="https://www.facebook.com/thvalexcitho.dvm/" style="text-decoration: none;">
                 <h4 style="color: #000;"> <img class="" src="logos//facebook.png" alt="" height="30px"> Facebook:</h4>
             </a>
+
             <p class="text-center"> zapateria Mendoza Huanta</p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 p-5 ">

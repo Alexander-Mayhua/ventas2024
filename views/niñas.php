@@ -58,8 +58,8 @@
                             <p class="card-text">Nuestras zapatillas Minnie Mouse, están fabricadas con material Poliéster, con planta EVA, disponible en dos colores para que los más pequeños puedan elegir el que más les guste, son una combinación perfecta de estilo y confort para darle la mejor experiencia en cada paso a los más pequeños de la casa..</p>
                         </div><h4>S/ 77.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -74,8 +74,8 @@
                             <p class="card-text">¡Las Sandalias tipo capelladas de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 29.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                             <p class="card-text">¡Descubre la comodidad de nuestras sandalias con felpa Minnie Mouse que Comprador Vip tiene para ti! El calzado perfecto para las niñas más fashionistas, diseñadas con amor y estilo, estas Crocs son el par perfecto para acompañarte esta temporada, le darán un toque de diversión a los pies de tu pequeña.</p>
                         </div> <h4>S/ 34.90 </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                      
                         </div><h4>S/ 31.90 </h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
                             <p class="card-text">¡Lúcete con estas zapatillas urbanas R18 para niños! Tiene una parte superior de PU con paneles transpirables de mesh y ajuste doble de velcro. Lleva una planta ligera de EVA y una suave plantilla de 8 mm para mayor comodidad.</p>
                         </div><h4> S/ 95.00</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -139,8 +139,8 @@
                             <p class="card-text">¡Los zapatos infantiles de Comprador Vip son la mejor opción para que los pequeños de la casa vistan con estilo! Contamos con una amplia variedad de productos licenciados con un diseño moderno, resistentes y cómodos.</p>
                         </div><h4>S/ 81.90</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -157,8 +157,8 @@
                                 Zapatillas Urbanas Adidas Infante Id5282 Advantage Cf,Suela y mediasuela de EVA de una sola pieza I</p>
                         </div><h4>S/ 119.20</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -173,8 +173,8 @@
                             <p class="card-text">¡Lleva la diversión a todas partes con estas zapatillas con luces R18!. Tiene una parte superior con paneles de mesh transpirable y diseño de estrellas. Lleva una correa de velcro y bandas elásticas para una fácil puesta. Su planta ligera y flexible de EVA brindará la mayor amortiguación para tus pies.</p>
                         </div><h4>S/ 111.00</h4><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detalles" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
