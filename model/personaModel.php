@@ -20,5 +20,13 @@ class personaModel{
         $sql= $this->conexion->query("UPDATE producto set imagen='{$imagen}' where id='{$id}'");
         return 1;
     }*/
+    public function buscarPersonaPorDni($nro_identidad){
+        $sql= $this->conexion->query("SELECT * FROM persona where
+      nro_identidad='{$nro_identidad}'");
+      $sql =$sql->fetch_object();
+      return $sql;
+
+
+    }
 }
 ?>

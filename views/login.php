@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -9,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./views/style.css">
+    <script>
+        const base_url = '<?php echo BASE_URL; ?>';
+    </script>
 </head>
 <body id="body">
     <div id="contenedor">
@@ -22,7 +22,7 @@
         <h1>Iniciar Sesión</h1>
         <img class="usuario" src="img/usuario.png" alt="" width="70px">
         
-        <input class="imput" type="text" id="username" name="username" placeholder="NOMBRE USUARIO" required>
+        <input class="imput" type="text" id="usuario" name="usuario" placeholder="NOMBRE USUARIO" required>
 
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
