@@ -59,8 +59,13 @@
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
 
+                        <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block">
+                            <span class="ms-1">Cerrar Sesión</span>
+                        </a>
+
                         <button type="button" class="btn btn-success" onclick="cerrar_sesion();">cerrar</button>
-                        <button class="btn btn-outline-success" type="submit">usuario</button>
+                        <button class="btn btn-outline-success" type="submit"><?php echo $_SESSION['sesion_ventas_nombres']?></button>
+                   
                     </form>
 
                 </div>

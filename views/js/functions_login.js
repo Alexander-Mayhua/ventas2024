@@ -1,5 +1,5 @@
 async function iniciar_sesion() {
-    console.log('iniciar_sesion prueba');
+/* console.log('iniciar_sesion prueba');*/
     let usuario = document.querySelector('#usuario');
     let password = document.querySelector('#password');
     if (usuario == "" || password == "") {
@@ -22,7 +22,7 @@ async function iniciar_sesion() {
             // swal("iniciar_sesion", json.mensaje, "success");
             location.replace(base_url + "nuevo-producto");
         } else {
-            swal("iniciar_sesion", json.mensaje, "error");
+            swal("iniciar sesion", json.mensaje, "error");
         }
 
 
@@ -49,7 +49,7 @@ async function cerrar_sesion() {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
-            body: datos
+          /*  body: datos*/
 
         });
 

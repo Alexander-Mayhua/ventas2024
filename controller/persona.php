@@ -29,11 +29,11 @@ if ($tipo == "registrar") {
        
 
         if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
-        || $codigo_postal==""|| $direccion==""|| $rol==""|| $password_hash==""|| $estado==""|| $fecha_registro=="") {
+        || $codigo_postal==""|| $direccion==""|| $rol==""|| $password==""|| $estado==""|| $fecha_registro=="") {
             //respuesta
             $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
         } else {
-            $arrPersona = $objPersona->registrarPersona($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal,$direccion,$rol,$password,$estado,$fecha_registro);
+            $arrPersona = $objPersona->registrarPersona($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal,$direccion,$rol,$secure_password,$estado,$fecha_registro);
 
             if ($arrPersona->id > 0) {
                 $arr_Respuestas = array('status' => true, 'mensaje' => 'Registrar Exitoso');
