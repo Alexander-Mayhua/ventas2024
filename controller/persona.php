@@ -29,7 +29,11 @@ if ($tipo == "registrar") {
        
 
         if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
+<<<<<<< Updated upstream
         || $codigo_postal==""|| $direccion==""|| $rol==""|| $password==""|| $estado==""|| $fecha_registro=="") {
+=======
+        || $codigo_postal==""|| $direccion==""|| $rol==""|| $secure_password==""|| $estado==""|| $fecha_registro=="") {
+>>>>>>> Stashed changes
             //respuesta
             $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
         } else {
