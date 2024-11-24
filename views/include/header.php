@@ -31,6 +31,9 @@
                             <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>inicio" style="color: #000;">INICIO</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>productos" style="color: #000;">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL ?>carrito" style="color: #000;">CARRITO </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -63,9 +66,9 @@
                             <span class="ms-1">Cerrar Sesión</span>
                         </a>
 
-                        <button type="button" class="btn btn-success" onclick="cerrar_sesion();">cerrar</button>
-                        <button class="btn btn-outline-success" type="submit"><?php echo $_SESSION['sesion_ventas_nombres']?></button>
-                   
+
+                        <button class="btn btn-outline-success" type="submit"><?php echo $_SESSION['sesion_ventas_nombres'] ?></button>
+
                     </form>
 
                 </div>

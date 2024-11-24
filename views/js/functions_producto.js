@@ -1,3 +1,42 @@
+/* */
+async function listar_productos() {
+    try {
+        let respuestas = await fetch(base_url + 'controller/Producto.php?tipo=listar');
+      json = await respuestas.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item => {
+                let nueva_fila = document.createElement("tr");
+
+                nueva_fila.id = "fila"+item.id;
+                cont +=1;
+                nueva_fila.innerHTML = `
+                 <th>${cont}</th>
+                 <td>${item.codigo}</td>
+                  <td>${item.nombre}</td>
+                  <td>${item.stock}</td>
+                  <td>${item.categoria.nombre}</td>
+                  <td>${item.id_proveedor}</td>
+                  <td></td>
+                 `;
+                document.querySelector('#tbl_producto').appendChild(nueva_fila);
+            });
+
+        }
+
+        console.log(json);
+    } catch (error) {
+        console.log("ooosp salio un error" + error);
+    }
+}
+if (document.querySelector('#tbl_producto')) {
+    listar_productos();
+}
+
+
+
+
 
 async function registrar_producto() {
     let codigo = document.getElementById('codigo').value;
@@ -9,64 +48,64 @@ async function registrar_producto() {
     let imagen = document.querySelector('#imagen').value;
     let proveedor = document.querySelector('#proveedor').value;
 
-   if (codigo==""|| nombre=="" || detalle=="" || precio==""|| stock=="" || categoria==""|| imagen==""|| proveedor=="" ) {
-    alert ("error, campos vacios");
-    return;
+    if (codigo == "" || nombre == "" || detalle == "" || precio == "" || stock == "" || categoria == "" || imagen == "" || proveedor == "") {
+        alert("error, campos vacios");
+        return;
 
-   }
-   try {
-    //capturamos los datos de formulario html
-    const datos=new FormData(frmRegistrar);
-    //enviar los datos hacia el controlador
-    let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        body:datos
-
-    });
-    json = await respuesta.json();
-    if(json.status){
-        swal("Registro",json.mensaje,"success");
-    }else{
-        swal("Registro",json.mensaje,"error");
     }
-        
+    try {
+        //capturamos los datos de formulario html
+        const datos = new FormData(frmRegistrar);
+        //enviar los datos hacia el controlador
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=registrar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
 
-    console.log(json);
-   } catch (e) {
-    console.log("ooops ocurrio un error "+e);
-   }
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Registro", json.mensaje, "success");
+        } else {
+            swal("Registro", json.mensaje, "error");
+        }
+
+
+        console.log(json);
+    } catch (e) {
+        console.log("ooops ocurrio un error " + e);
+    }
 }
 
 
 /*listar categoria */
 
 async function listar_categoria() {
-    try{
-        let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
+    try {
+        let respuesta = await fetch(base_url + 'controller/categoria.php?tipo=listar');
         json = await respuesta.json();
-        if (json.status){
+        if (json.status) {
             let datos = json.contenido;
-              // de otra manera 
-              /*let contenido_select ='<option value=">Selecione</option>';
-              datos.forEach(element=>{
-                contenido_select +='<option value"'+element.id + '">'+ element.nombre+ '<option>'; */
+            // de otra manera 
+            /*let contenido_select ='<option value=">Selecione</option>';
+            datos.forEach(element=>{
+              contenido_select +='<option value"'+element.id + '">'+ element.nombre+ '<option>'; */
             datos.forEach(element => {
 
-                $('#categoria').append($('<option />',{
-                    text:`${element.nombre}`,
-                    value:` ${element.id}`
+                $('#categoria').append($('<option />', {
+                    text: `${element.nombre}`,
+                    value: ` ${element.id}`
                 }));
             });
             //document.getElementtByid('categoria').innerHTML=contenido_select;
 
         }
-      
+
         console.log(respuesta);
 
-    }catch(e){
-        console.log("error al cargar categorias"+e);
+    } catch (e) {
+        console.log("error al cargar categorias" + e);
     }
 }
 
@@ -77,6 +116,7 @@ async function listar_proveedor() {
         let respuesta = await fetch(base_url + 'controller/proveedor.php?tipo=listar');
         let json = await respuesta.json();
         if (json.status) {
+
             let datos = json.contenido;
             datos.forEach(element => {
                 $('#proveedor').append($('<option />', {

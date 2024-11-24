@@ -19,5 +19,14 @@ class categoriaModel{
         }
         return $arrRespuesta;
     }
+
+
+
+    public function obtener_categorias($id){
+ $respuestas= $this->conexion->query("SELECT * FROM categoria where id='{$id}'");
+ $objeto=$respuestas->fetch_object();
+ return $objeto;
+ 
+    }
 }
 ?>
