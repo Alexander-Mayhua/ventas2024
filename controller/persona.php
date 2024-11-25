@@ -28,6 +28,7 @@ if ($tipo == "registrar") {
         $secure_password=password_hash($password,PASSWORD_DEFAULT);
        
 
+
         if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
 
         || $codigo_postal==""|| $direccion==""|| $rol==""|| $secure_password==""|| $estado==""|| $fecha_registro=="") {
@@ -54,8 +55,6 @@ if ($tipo == "registrar") {
                      }*/
 
 
-                     
-
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar persona');
             }
@@ -64,6 +63,5 @@ if ($tipo == "registrar") {
     }
         
 }
-
 
 ?>

@@ -29,7 +29,7 @@ if ($tipo == "listar") {
             $r_proveedor = $objProveedor->obtener_proveedores($id_proveedor);
             $arr_productos[$i]->proveedor = $r_proveedor;
 
-            
+
             $id_producto = $arr_productos[$i]->id;
             $producto = $arr_productos[$i]->nombre;
             $opciomes = '
@@ -88,3 +88,5 @@ if ($tipo == "registrar") {
         }
     }
 }
+
+?>

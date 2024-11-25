@@ -28,12 +28,14 @@
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
 
-        <button class="boton" type="submit"> ingresar</button>
-       
-
+        
+    
+        <button class="boton" type="submit" > ingresar</button>
+ 
 
     </form>
-    <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
+   <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
+
 </div>
 </body>
 </html>

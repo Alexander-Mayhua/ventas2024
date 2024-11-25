@@ -1,5 +1,5 @@
 async function iniciar_sesion() {
-/* console.log('iniciar_sesion prueba');*/
+    /* console.log('iniciar_sesion prueba');*/
     let usuario = document.querySelector('#usuario');
     let password = document.querySelector('#password');
     if (usuario == "" || password == "") {
@@ -49,7 +49,7 @@ async function cerrar_sesion() {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
-          /*  body: datos*/
+            /*  body: datos*/
 
         });
 
@@ -60,5 +60,4 @@ async function cerrar_sesion() {
     } catch (error) {
         console.log('ocurrio un error' + error);
     }
-
 }
