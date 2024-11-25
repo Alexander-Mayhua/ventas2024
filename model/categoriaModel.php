@@ -21,6 +21,15 @@ class categoriaModel{
     }
 
 
+    public function registrarCategoria($nombre,$detalle){
+        $sql = $this->conexion->query("CALL insertarCategoria('{$nombre}','{$detalle}')");
+   
+              $sql = $sql->fetch_object() ;
+              return $sql;                                         
+       }
+   
+
+/*para mostra  categoria*/
 
     public function obtener_categorias($id){
  $respuestas= $this->conexion->query("SELECT * FROM categoria where id='{$id}'");

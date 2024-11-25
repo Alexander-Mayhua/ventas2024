@@ -37,10 +37,10 @@ async function registrar_compra() {
    }
 }
 
-/*listar categoria */
+/*listar producto */
 async function listar_producto() {
     try{
-        let respuesta= await fetch(base_url+'controller/productoListar.php?tipo=listar');
+        let respuesta= await fetch(base_url+'controller/compras.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;

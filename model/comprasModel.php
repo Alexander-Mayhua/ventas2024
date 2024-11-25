@@ -7,8 +7,8 @@ class comprasModel{
         $this->conexion = new Conexion();
         $this->conexion = $this->conexion->connect();
     }
-    public function registrarCompra($producto,$cantidad,$precio,$fecha_compra,$trabajador){
-     $sql = $this->conexion->query("CALL insertarCompra('{$producto}','{$cantidad}','{$precio}',
+    public function registrarCompra($id_producto,$cantidad,$precio,$fecha_compra,$trabajador){
+     $sql = $this->conexion->query("CALL insertarCompra('{$id_producto}','{$cantidad}','{$precio}',
                                                      '{$fecha_compra}','{$trabajador}')");
 
            $sql = $sql->fetch_object();
@@ -21,5 +21,26 @@ class comprasModel{
         $sql= $this->conexion->query("UPDATE producto set imagen='{$imagen}' where id='{$id}'");
         return 1;
     }*/
-}
+
+
+
+   
+      /*listar producto */
+        public function obtener_producto(){
+            $arrRespuesta = array();
+            $respuesta = $this->conexion->query("SELECT * FROM producto");
+            
+    
+            while($objeto= $respuesta->fetch_object()){
+                array_push($arrRespuesta,$objeto);
+            }
+            return $arrRespuesta;
+        }
+
+       
+    }
+
+
+
+
 ?>

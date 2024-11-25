@@ -1,5 +1,5 @@
 <div class="col-12">
-    
+<a class="dropdown-item" href="<?php echo BASE_URL ?>nuevo-producto">Agregar producto</a>
     <table class="table  mt-5" style="width: 100%;" >
     <thead class="table-dark">
            <tr>

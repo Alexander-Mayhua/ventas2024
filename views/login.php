@@ -27,15 +27,13 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-<<<<<<< Updated upstream
+
         <button class="boton" type="submit"> ingresar</button>
        
-=======
-        <button class="boton" type="submit" > ingresar</button>
-        <a class="nav-link" href=" <?php echo BASE_URL ?>inicio" style="color: #000;">CARRITO </a>
->>>>>>> Stashed changes
+
+
     </form>
-  <!--  <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>-->
+    <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
 </div>
 </body>
 </html>

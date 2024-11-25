@@ -17,7 +17,7 @@ async function listar_productos() {
                   <td>${item.nombre}</td>
                   <td>${item.stock}</td>
                   <td>${item.categoria.nombre}</td>
-                  <td>${item.id_proveedor}</td>
+                  <td>${item.proveedor.nombre}</td>
                   <td></td>
                  `;
                 document.querySelector('#tbl_producto').appendChild(nueva_fila);

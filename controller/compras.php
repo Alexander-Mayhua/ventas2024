@@ -47,4 +47,30 @@ if ($tipo == "registrar") {
     }
         
 }
+
+
+/* listar producto*/
+$tipo = $_REQUEST['tipo'];
+//instanciar la clase  categoria model
+
+$tipo = $_REQUEST['tipo'];
+if ($tipo =="listar"){
+    //respuestaas
+    $arr_Respuesta =array('status'=>false, 'contenido'=>'');
+    $arr_productos= $objProducto->obtener_producto();
+  if(!empty($arr_producto)){
+    //recorremos el array para agregar las opciones de categorias
+     for($i=0; $i < count($arr_producto); $i++){
+        $id_producto = $arr_productos[$i]->id;
+        $producto =$arr_productos[$i]->nombre;
+        $opciomes='
+        <a href=" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
+        $arr_productos[$i]->optiones =$opciomes;
+     }
+     $arr_Respuesta['status']=true;
+     $arr_Respuesta['contenido']=$arr_producto;
+  }
+   
+    echo json_encode($arr_Respuesta);
+}
 ?>

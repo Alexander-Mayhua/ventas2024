@@ -9,40 +9,46 @@ $tipo = $_REQUEST['tipo'];
 $objProducto = new ProductoModel();
 /* */
 $objCategoria = new categoriaModel();
-$objPersona= new personaModel();
+$objPersona = new personaModel();
+$objProveedor = new proveedorModel();
 /* */
 if ($tipo == "listar") {
-  
-        //respuestaas
-        $arr_Respuesta =array('status'=>false, 'contenido'=>'');
-        $arr_productos = $objProducto->obtener_productos();
-      if(!empty($arr_productos)){
-        //recorremos el array para agregar las opciones de categorias
-         for($i=0; $i < count($arr_productos); $i++){
-           /** */
-           $id_categoria=$arr_productos[$i]->id_categoria;
-           $r_categoria=$objCategoria->obtener_categorias($id_categoria);
-           $arr_productos[$i]->categoria=$r_categoria;
 
+    //respuestaas
+    $arr_Respuesta = array('status' => false, 'contenido' => '');
+    $arr_productos = $objProducto->obtener_productos();
+    if (!empty($arr_productos)) {
+        //recorremos el array para agregar las opciones de categorias
+        for ($i = 0; $i < count($arr_productos); $i++) {
+            /** */
+            $id_categoria = $arr_productos[$i]->id_categoria;
+            $r_categoria = $objCategoria->obtener_categorias($id_categoria);
+            $arr_productos[$i]->categoria = $r_categoria;
+
+            $id_proveedor = $arr_proveedor[$i]->id_proveedor;
+            $r_proveedor = $objProveedor->obtener_proveedores($id_proveedor);
+            $arr_productos[$i]->proveedor = $r_proveedor;
+
+            
             $id_producto = $arr_productos[$i]->id;
-            $producto =$arr_productos[$i]->nombre;
-            $opciomes='
+            $producto = $arr_productos[$i]->nombre;
+            $opciomes = '
             <a href=" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
-            $arr_productos[$i]->optiones =$opciomes;
-         }
-         $arr_Respuesta['status']=true;
-         $arr_Respuesta['contenido']=$arr_productos;
-      }
-        echo json_encode($arr_Respuesta);
+            $arr_productos[$i]->optiones = $opciomes;
+        }
+        $arr_Respuesta['status'] = true;
+        $arr_Respuesta['contenido'] = $arr_productos;
     }
+    echo json_encode($arr_Respuesta);
+}
 
 
 
 if ($tipo == "registrar") {
     // imagen
-   //  print_r($_POST);
+    //  print_r($_POST);
     // echo $_FILES['imagen']['name'];
-   if ($_POST) {
+    if ($_POST) {
         $codigo  = $_POST['codigo'];
         $nombre  = $_POST['nombre'];
         $detalle  = $_POST['detalle'];
@@ -60,31 +66,25 @@ if ($tipo == "registrar") {
 
             if ($arrProducto->id > 0) {
                 $arr_Respuestas = array('status' => true, 'mensaje' => 'Registrar Exitoso');
-            
+
 
                 //cargar archivo
-                $archivo= $_FILES['imagen']['tmp_name'];
+                $archivo = $_FILES['imagen']['tmp_name'];
                 $destino = './assets/img_producto/';
-                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION));
-                $nombre = $arrProducto->id.".".$tipoArchivo;
-                if(move_uploaded_file($archivo,$destino.$nombre)){
-                 $arr_imagen =$objProducto->actualizar_imagen($id,$nombre);
-                } else{
-                    $arr_Respuestas = array('status'=>true,
-                    'mensaje'=>'Registro exitoso, error al subir imagen');
-                     }
-
-
-                     
-
+                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+                $nombre = $arrProducto->id . "." . $tipoArchivo;
+                if (move_uploaded_file($archivo, $destino . $nombre)) {
+                    $arr_imagen = $objProducto->actualizar_imagen($id, $nombre);
+                } else {
+                    $arr_Respuestas = array(
+                        'status' => true,
+                        'mensaje' => 'Registro exitoso, error al subir imagen'
+                    );
+                }
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar Producto');
             }
             echo json_encode($arr_Respuestas);
         }
     }
-        
 }
-
-
-?>
