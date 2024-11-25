@@ -28,7 +28,7 @@ async function listar_categorias() {
         console.log("ooosp salio un error" + error);
     }
 }
-if (document.querySelector('#tbl_producto')) {
+if (document.querySelector('#tbl_categoria')) {
     listar_categorias();
 }
 

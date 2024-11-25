@@ -2,7 +2,7 @@
 session_start();
 class vistaModelo{
 protected static function obtener_vistas($vista){
-    $palabras_permitidas = ['inicio','carrito','varones','mujeres','detalles',
+    $palabras_permitidas = ['inicio','carrito','varones','mujeres','detalles', 'categorias',
 
     'perfil','informacion','nuevo-producto','nuevo-categoria','nueva-compra','niños','niñas','usuario','login','nuevo-usuario','productos','nuevo-persona'];
    /*if(!isset($_SESSION['sesion_ventas_id'])){ //si no existe la variable sesion returna a login

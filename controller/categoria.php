@@ -53,7 +53,7 @@ if ($tipo == "registrar") {
       //respuesta
       $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
     } else {
-      $arrCategorias = $objCategoria->registrarCategoria($nombre, $detalle);
+      $arrCategorias = $objCategorias->registrarCategoria($nombre, $detalle);
 
       if ($arrCategorias->id > 0) {
         $arr_Respuesta = array('status' => true, 'mensaje' => 'Registrar Exitoso');
