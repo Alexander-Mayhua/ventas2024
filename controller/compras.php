@@ -1,8 +1,15 @@
 <?php
 require_once('../model/comprasModel.php');
+
+require_once('../model/productoModel.php');
+require_once('../model/personaModel.php');
+
 $tipo = $_REQUEST['tipo'];
 //instancio la clase modeloproducto
 $objCompra= new comprasModel();
+
+$objProducto = new productoModel();
+$objPersona = new personaModel();
 if ($tipo == "registrar") {
     // imagen
    //  print_r($_POST);
@@ -73,14 +80,7 @@ if ($tipo =="listar"){
 }*/
 
 
-require_once('../model/productoModel.php');
-require_once('../model/personaModel.php');
-
 $tipo = $_REQUEST['tipo'];
-
-// Instancio las clases necesarias
-$objProducto = new productoModel();
-$objPersona = new personaModel();
 
 if ($tipo == "listar") {
     // Respuesta inicial
