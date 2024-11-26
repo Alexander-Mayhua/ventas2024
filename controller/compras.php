@@ -48,16 +48,14 @@ if ($tipo == "registrar") {
         
 }
 
-
-/* listar producto*/
-$tipo = $_REQUEST['tipo'];
+/*$tipo = $_REQUEST['tipo'];
 //instanciar la clase  categoria model
 
 $tipo = $_REQUEST['tipo'];
 if ($tipo =="listar"){
     //respuestaas
     $arr_Respuesta =array('status'=>false, 'contenido'=>'');
-    $arr_productos= $objProducto->obtener_producto();
+    $arr_productos= $objCompra->obtener_producto();
   if(!empty($arr_producto)){
     //recorremos el array para agregar las opciones de categorias
      for($i=0; $i < count($arr_producto); $i++){
@@ -72,5 +70,53 @@ if ($tipo =="listar"){
   }
    
     echo json_encode($arr_Respuesta);
+}*/
+
+
+require_once('../model/productoModel.php');
+require_once('../model/personaModel.php');
+
+$tipo = $_REQUEST['tipo'];
+
+// Instancio las clases necesarias
+$objProducto = new productoModel();
+$objPersona = new personaModel();
+
+if ($tipo == "listar") {
+    // Respuesta inicial
+    $arr_Respuesta = array('status' => false, 'contenido' => '');
+
+    // Obtener las compras desde el modelo
+    $arr_compras = $objCompra->obtener_compras();
+
+    if (!empty($arr_compras)) {
+        // Recorrer el array de compras para agregar detalles adicionales
+        for ($i = 0; $i < count($arr_compras); $i++) {
+            // Obtener detalles del producto relacionado con la compra
+            $id_producto = $arr_compras[$i]->id_producto;
+            $r_producto = $objProducto->obtener_producto($id_producto);
+            $arr_compras[$i]->producto = $r_producto;
+
+            // Obtener detalles del trabajador que realizó la compra
+            $id_trabajador = $arr_compras[$i]->id_trabajador;
+            $r_trabajador = $objPersona->obtener_personas($id_trabajador);
+            $arr_compras[$i]->trabajador = $r_trabajador;
+
+            // Generar las opciones para cada compra (por ejemplo, editar)
+            $id_compra = $arr_compras[$i]->id;
+            $opciomes = '
+                <a href="#" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
+            $arr_compras[$i]->optiones = $opciomes;
+        }
+        // Respuesta positiva con los datos obtenidos
+        $arr_Respuesta['status'] = true;
+        $arr_Respuesta['contenido'] = $arr_compras;
+    }
+
+    // Devolver la respuesta en formato JSON
+    echo json_encode($arr_Respuesta);
 }
+
+
+
 ?>

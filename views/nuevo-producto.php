@@ -61,7 +61,7 @@
                             <!-- Imagen -->
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label class="form-label"><i class="fas fa-image me-2"></i>Imagen del Producto</label>
+                                    <label class="form-label"><i class="fas fa-image me-2"></i>Imagen</label>
                                     <input type="file" id="imagen" name="imagen" class="form-control" accept="image/*">
                                 </div>
                             </div>

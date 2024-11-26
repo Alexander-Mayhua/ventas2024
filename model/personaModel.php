@@ -28,8 +28,24 @@ class personaModel{
 
 
     }
+/* */
+ public function obtener_persona(){
+        $arrRespuesta = array();
+        $respuesta = $this->conexion->query("SELECT * FROM persona");
+
+        while($objeto= $respuesta->fetch_object()){
+            array_push($arrRespuesta,$objeto);
+        }
+        return $arrRespuesta;
+    
+    }
+
+    /* */
+    public function obtener_personas($id){
+        $respuestas= $this->conexion->query("SELECT * FROM persona where id='{$id}'");
+        $objeto=$respuestas->fetch_object();
+        return $objeto;
+        
+           }
 }
-
-
-
 ?>

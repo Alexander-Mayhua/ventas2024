@@ -4,6 +4,8 @@ require_once('../model/productoModel.php');
 /* */
 require_once('../model/categoriaModel.php');
 require_once('../model/personaModel.php');
+
+require_once('../model/proveedorModel.php');
 $tipo = $_REQUEST['tipo'];
 //instancio la clase modeloproducto
 $objProducto = new ProductoModel();
@@ -25,7 +27,7 @@ if ($tipo == "listar") {
             $r_categoria = $objCategoria->obtener_categorias($id_categoria);
             $arr_productos[$i]->categoria = $r_categoria;
 
-            $id_proveedor = $arr_proveedor[$i]->id_proveedor;
+            $id_proveedor = $arr_productos[$i]->id_proveedor;
             $r_proveedor = $objProveedor->obtener_proveedores($id_proveedor);
             $arr_productos[$i]->proveedor = $r_proveedor;
 
@@ -70,16 +72,15 @@ if ($tipo == "registrar") {
 
                 //cargar archivo
                 $archivo = $_FILES['imagen']['tmp_name'];
-                $destino = './assets/img_producto/';
+                $destino = './assets/img_productos/';
                 $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
                 $nombre = $arrProducto->id . "." . $tipoArchivo;
-                if (move_uploaded_file($archivo, $destino . $nombre)) {
-                    $arr_imagen = $objProducto->actualizar_imagen($id, $nombre);
+
+              
+
+                if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
                 } else {
-                    $arr_Respuestas = array(
-                        'status' => true,
-                        'mensaje' => 'Registro exitoso, error al subir imagen'
-                    );
+                    $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
                 }
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar Producto');

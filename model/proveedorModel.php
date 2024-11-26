@@ -18,9 +18,9 @@ class proveedorModel {
         }
         return $arrRespuesta;
     }
-
+/* */
     public function obtener_proveedores($id){
-        $respuestas= $this->conexion->query("SELECT * FROM persona where id='{$id}'");
+        $respuestas= $this->conexion->query("SELECT * FROM persona where rol='proveedor'");
         $objeto=$respuestas->fetch_object();
         return $objeto;
         

@@ -26,21 +26,26 @@ class comprasModel{
 
    
       /*listar producto */
-        public function obtener_producto(){
-            $arrRespuesta = array();
-            $respuesta = $this->conexion->query("SELECT * FROM producto");
-            
-    
-            while($objeto= $respuesta->fetch_object()){
-                array_push($arrRespuesta,$objeto);
-            }
-            return $arrRespuesta;
-        }
+      public function obtener_productos($id){
+        $respuestas= $this->conexion->query("SELECT * FROM producto where id='{$id}'");
+        $objeto=$respuestas->fetch_object();
+        return $objeto;
+        
+           }
+/* */ 
 
-       
+
+public function obtener_compras(){
+    $arrRespuesta = array();
+    $respuesta = $this->conexion->query("SELECT * FROM compras");
+
+    // Recorrer el resultado de la consulta y almacenar cada compra en el arreglo
+    while($objeto = $respuesta->fetch_object()){
+        array_push($arrRespuesta, $objeto);
     }
 
-
-
-
+    return $arrRespuesta;
+}
+       
+    }
 ?>

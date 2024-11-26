@@ -1,3 +1,42 @@
+/** */
+async function listar_compras() {
+    try {
+        let respuestas = await fetch(base_url + 'controller/compras.php?tipo=listar');
+      json = await respuestas.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item => {
+                let nueva_fila = document.createElement("tr");
+
+                nueva_fila.id = "fila"+item.id;
+                cont +=1;
+                nueva_fila.innerHTML = `
+                 <th>${cont}</th>
+                 <td>${item.producto.nombre}</td>
+                  <td>${item.cantidad}</td>
+                  <td>${item.precio}</td>
+                  <td>${item.fecha_compra}</td>
+                  <td>${item.trabajador.razon_social}</td>
+                  <td></td>
+                 `;
+                document.querySelector('#tbl_compra').appendChild(nueva_fila);
+            });
+
+        }
+
+        console.log(json);
+    } catch (error) {
+        console.log("ooosp salio un error" + error);
+    }
+}
+if (document.querySelector('#tbl_compra')) {
+    listar_compras();
+}
+
+
+
+
 
 async function registrar_compra() {
     let producto = document.getElementById('producto').value;
