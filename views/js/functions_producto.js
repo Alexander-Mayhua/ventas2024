@@ -18,7 +18,7 @@ async function listar_productos() {
                   <td>${item.stock}</td>
                   <td>${item.categoria.nombre}</td>
                   <td>${item.proveedor.razon_social}</td>
-                  <td>${item.opciomes}</td>
+                  <td>${item.opciones}</td>
                  `;
                 document.querySelector('#tbl_producto').appendChild(nueva_fila);
             });
@@ -151,10 +151,9 @@ if(json.status){
     document.querySelector('#codigo').value= json.contenido.codigo;
     document.querySelector('#nombre').value= json.contenido.nombre;
     document.querySelector('#categoria').value= json.contenido.categoria;
-    document.querySelector('#precio').value= json.contenido.precio;
-    document.querySelector('#codigo').value= json.contenido.codigo;
-    document.querySelector('#codigo').value= json.contenido.codigo;
-    document.querySelector('#codigo').value= json.contenido.codigo;
+    document.querySelector('#imagen').value= json.contenido.precio;
+    document.querySelector('#proveedor').value= json.contenido.codigo;
+ 
 
 }else{
     window.location= base_url+"productos";
