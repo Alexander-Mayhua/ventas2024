@@ -27,9 +27,6 @@
         
         <input class="imput" type="password" id="password" name="password" placeholder="CONTRASEÑA" required>
 
-
-        
-    
         <button class="boton" type="submit" > ingresar</button>
  
 
