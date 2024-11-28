@@ -6,13 +6,13 @@ require_once('../model/personaModel.php');
 $tipo = $_REQUEST['tipo'];
 //instanciar la clase  categoria model
 
-$objcategoria = new categoriaModel();
+$objCategoria = new categoriaModel();
 
 $tipo = $_REQUEST['tipo'];
 if ($tipo == "listar") {
   //respuestaas
   $arr_Respuesta = array('status' => false, 'contenido' => '');
-  $arr_categorias = $objcategoria->obtener_categoria();
+  $arr_categorias = $objCategoria->obtener_categoria();
   if (!empty($arr_categorias)) {
     //recorremos el array para agregar las opciones de categorias
     for ($i = 0; $i < count($arr_categorias); $i++) {
@@ -53,7 +53,7 @@ if ($tipo == "registrar") {
       //respuesta
       $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
     } else {
-      $arrCategorias = $objCategorias->registrarCategoria($nombre, $detalle);
+      $arrCategorias = $objCategoria->registrarCategoria($nombre, $detalle);
 
       if ($arrCategorias->id > 0) {
         $arr_Respuesta = array('status' => true, 'mensaje' => 'Registrar Exitoso');

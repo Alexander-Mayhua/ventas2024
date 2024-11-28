@@ -39,10 +39,10 @@ if ($tipo == "listar") {
 
 
 
-require_once('../model/personaModel.php');
+
 $tipo = $_REQUEST['tipo'];
 //instancio la clase modeloproducto
-$objPersona = new personaModel();
+
 if ($tipo == "registrar") {
     // imagen
    //  print_r($_POST);
