@@ -62,7 +62,7 @@ $tipo = $_REQUEST['tipo'];
 if ($tipo =="listar"){
     //respuestaas
     $arr_Respuesta =array('status'=>false, 'contenido'=>'');
-    $arr_productos= $objCompra->obtener_producto();
+    $arr_productos= $objCompra->obtener_productos();
   if(!empty($arr_producto)){
     //recorremos el array para agregar las opciones de categorias
      for($i=0; $i < count($arr_producto); $i++){

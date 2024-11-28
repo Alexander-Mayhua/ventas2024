@@ -22,9 +22,6 @@ class comprasModel{
         return 1;
     }*/
 
-
-
-   
       /*listar producto */
       public function obtener_producto($id){
         $respuestas= $this->conexion->query("SELECT * FROM producto where id='{$id}'");
