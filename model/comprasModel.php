@@ -32,6 +32,9 @@ class comprasModel{
         return $objeto;
         
            }
+
+
+           
 /* */ 
 
 

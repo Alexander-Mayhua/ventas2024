@@ -10,7 +10,7 @@ class ProductoModel{
 /** */
     public function obtener_productos(){
         $arrRespuesta = array();
-        $respuesta = $this->conexion->query("SELECT * FROM producto");
+        $respuesta = $this->conexion->query("SELECT * FROM producto ");
 
         while($objeto= $respuesta->fetch_object()){
             array_push($arrRespuesta,$objeto);
