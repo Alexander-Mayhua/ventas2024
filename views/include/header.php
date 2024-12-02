@@ -30,9 +30,7 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>inicio" style="color: #000;">INICIO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>productos" style="color: #000;">PRODUCTOS</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL ?>carrito" style="color: #000;">CARRITO </a>
                         </li>
