@@ -23,7 +23,7 @@ async function listar_persona() {
                    <td>${item.codigo_postal}</td>
                    <td>${item.direccion}</td>
                    <td>${item.rol}</td>
-                
+                    <td>${item.opciomes}</td>
                   <td></td>
                  `;
                 document.querySelector('#tbl_persona').appendChild(nueva_fila);
@@ -87,3 +87,37 @@ async function registrar_persona() {
 }
 
 
+
+
+
+async function ver_persona(id) {
+    const formData= new FormData();
+    formData.append('id_persona', id);
+    try {
+      let respuesta= await fetch(base_url+'controller/persona.php?tipo=ver',{
+         method: 'POST' ,
+         mode:'cors',
+         cache: 'no-cache',
+         body: formData
+      });  
+
+
+      json= await respuesta.json();
+if(json.status){
+    document.querySelector('#codigo').value= json.contenido.codigo;
+    document.querySelector('#nombre').value= json.contenido.nombre;
+    document.querySelector('#categoria').value= json.contenido.categoria;
+    document.querySelector('#imagen').value= json.contenido.precio;
+    document.querySelector('#proveedor').value= json.contenido.codigo;
+ 
+
+}else{
+    window.location= base_url+"persona";
+}
+
+
+      console.log(json);
+    } catch (error) {
+        console.log("ooops ocurrio u error"+error);
+    }
+}
