@@ -45,13 +45,22 @@ class ProductoModel{
            }
 
 
-
+//ver producto poara editar//
 public function verProducto($id){
-$sql = $this->conexion->query(" SELECT * FROM producto WHERE id=$id");
+$sql = $this->conexion->query(" SELECT * FROM producto WHERE id='$id'");
 $sql = $sql->fetch_object();
 return $sql;
 }
 
+
+public function actualizarProducto($id,  $nombre, $detalle, $precio,  $categoria, $proveedor){
+    $sql = $this->conexion->query("CALL insertarProducto('{$id}','{$nombre}','{$detalle}','{$precio}',
+    '{$categoria}','{$proveedor}')");
+    
+    $sql = $sql->fetch_object() ;
+    return $sql;    
+    }
+    
 
 }
 ?>

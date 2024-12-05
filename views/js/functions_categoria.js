@@ -15,6 +15,7 @@ async function listar_categorias() {
                  <th>${cont}</th>
                  <td>${item.nombre}</td>
                   <td>${item.detalle}</td>
+                 <td>${item.opciones}</td>
                  
                   <td></td>
                  `;
@@ -69,4 +70,33 @@ async function registrar_categoria() {
    } catch (e) {
     console.log("ooops ocurrio un error "+e);
    }
+}
+
+//ver categoria poara editar//
+async function ver_categoria(id) {
+    const formData= new FormData();
+    formData.append('id_categoria', id);
+    try {
+      let respuesta= await fetch(base_url+'controller/categoria.php?tipo=ver',{
+         method: 'POST' ,
+         mode:'cors',
+         cache: 'no-cache',
+         body: formData
+      });  
+
+
+      json= await respuesta.json();
+if(json.status){
+    document.querySelector('#nombre').value= json.contenido.nombre;
+    document.querySelector('#detalle').value= json.contenido.detalle;
+    
+}else{
+    window.location= base_url+"categoria";
+}
+
+
+      console.log(json);
+    } catch (error) {
+        console.log("ooops ocurrio u error"+error);
+    }
 }

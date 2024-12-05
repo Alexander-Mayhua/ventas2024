@@ -2,15 +2,15 @@
 async function listar_productos() {
     try {
         let respuestas = await fetch(base_url + 'controller/Producto.php?tipo=listar');
-      json = await respuestas.json();
+        json = await respuestas.json();
         if (json.status) {
             let datos = json.contenido;
             let cont = 0;
             datos.forEach(item => {
                 let nueva_fila = document.createElement("tr");
 
-                nueva_fila.id = "fila"+item.id;
-                cont +=1;
+                nueva_fila.id = "fila" + item.id;
+                cont += 1;
                 nueva_fila.innerHTML = `
                  <th>${cont}</th>
                  <td>${item.codigo}</td>
@@ -18,7 +18,7 @@ async function listar_productos() {
                   <td>${item.stock}</td>
                   <td>${item.categoria.nombre}</td>
                   <td>${item.proveedor.razon_social}</td>
-                  <td>${item.opciomes}</td>
+                  <td>${item.opciones}</td>
                  `;
                 document.querySelector('#tbl_producto').appendChild(nueva_fila);
             });
@@ -133,35 +133,51 @@ async function listar_proveedor() {
     }
 }
 
-
+//ver producto poara editar//
 async function ver_producto(id) {
-    const formData= new FormData();
+    const formData = new FormData();
     formData.append('id_producto', id);
     try {
-      let respuesta= await fetch(base_url+'controller/Producto.php?tipo=ver',{
-         method: 'POST' ,
-         mode:'cors',
-         cache: 'no-cache',
-         body: formData
-      });  
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=ver', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
 
+        json = await respuesta.json();
+        if (json.status) {
+            document.querySelector('#codigo').value = json.contenido.codigo;
+            document.querySelector('#nombre').value = json.contenido.nombre;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#categoria').value = json.contenido.id_categoria;
+           /* document.querySelector('#imagen').value = json.contenido.imagen;*/
+            document.querySelector('#proveedor').value = json.contenido.id_proveedor;
 
-      json= await respuesta.json();
-if(json.status){
-    document.querySelector('#codigo').value= json.contenido.codigo;
-    document.querySelector('#nombre').value= json.contenido.nombre;
-    document.querySelector('#categoria').value= json.contenido.categoria;
-    document.querySelector('#imagen').value= json.contenido.precio;
-    document.querySelector('#proveedor').value= json.contenido.codigo;
- 
+        } else {
+            window.location = base_url + "productos";
+        }
 
-}else{
-    window.location= base_url+"productos";
-}
-
-
-      console.log(json);
+        console.log(json);
     } catch (error) {
-        console.log("ooops ocurrio u error"+error);
+        console.log("ooops ocurrio u error" + error);
     }
+
+
 }
+
+async function actualizar_producto() {
+    const datos= new  formData(frmActualizar);
+    try{
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
+    }
+    }

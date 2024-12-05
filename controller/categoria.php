@@ -22,9 +22,11 @@ if ($tipo == "listar") {
 
       $id_categoria = $arr_categorias[$i]->id;
       $categoria = $arr_categorias[$i]->nombre;
-      $opciomes = '
-        <a href=" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
-      $arr_categorias[$i]->optiones = $opciomes;
+      $opciomes = '<a href="'.BASE_URL.'editar-categoria/'. $id_categoria.'">Editar </a>
+            
+      <button onclick="eliminar_categoria('.$id_categoria.');">Eliminar</button>
+      ';
+      $arr_categorias[$i]->opciones = $opciomes;
     }
     $arr_Respuesta['status'] = true;
     $arr_Respuesta['contenido'] = $arr_categorias;
@@ -64,4 +66,26 @@ if ($tipo == "registrar") {
     }
   }
 }
+
+
+
+
+
+//ver persona poara editar//
+
+if ($tipo == "ver") {
+  $id_categoria = $_POST['id_categoria'];
+  $arr_Respuesta =$objCategoria-> verCategoria($id_categoria);
+  /*print_r($arr_Respuesta);*/
+  
+  if(empty($arr_Respuesta)){
+      $response= array('status'=>false,'mensaje'=>"error, no hay informacion");
+  }else{
+      $response = array('status'=> true,'mensaje'=>"datos encontrados",'contenido'=>$arr_Respuesta);
+  }
+  echo json_encode($response);
+  
+  }
+
+
 ?>

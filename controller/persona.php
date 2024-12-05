@@ -109,7 +109,7 @@ if ($tipo == "registrar") {
 
 
 
-
+//ver persona poara editar//
 
 if ($tipo == "ver") {
   $id_persona = $_POST['id_persona'];

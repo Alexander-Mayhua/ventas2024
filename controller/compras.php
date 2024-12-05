@@ -104,9 +104,12 @@ if ($tipo == "listar") {
 
             // Generar las opciones para cada compra (por ejemplo, editar)
             $id_compra = $arr_compras[$i]->id;
-            $opciomes = '
-                <a href="#" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
-            $arr_compras[$i]->optiones = $opciomes;
+         //localhost/editar-compra/
+         $opciomes = '<a href="'.BASE_URL.'editar-compra/'. $id_compra.'">Editar </a>
+            
+         <button onclick="eliminar_compra('.$id_compra.');">Eliminar</button>
+         ';
+            $arr_compras[$i]->opciones = $opciomes;
         }
         // Respuesta positiva con los datos obtenidos
         $arr_Respuesta['status'] = true;
@@ -117,6 +120,20 @@ if ($tipo == "listar") {
     echo json_encode($arr_Respuesta);
 }
 
+//ver compra para editar//
 
+if ($tipo == "ver") {
+    $id_compra = $_POST['id_compra'];
+    $arr_Respuesta =$objCompras-> verCompra($id_compra);
+    /*print_r($arr_Respuesta);*/
+    
+    if(empty($arr_Respuesta)){
+        $response= array('status'=>false,'mensaje'=>"error, no hay informacion");
+    }else{
+        $response = array('status'=> true,'mensaje'=>"datos encontrados",'contenido'=>$arr_Respuesta);
+    }
+    echo json_encode($response);
+    
+    }
 
 ?>

@@ -23,7 +23,7 @@ async function listar_persona() {
                    <td>${item.codigo_postal}</td>
                    <td>${item.direccion}</td>
                    <td>${item.rol}</td>
-                    <td>${item.opciomes}</td>
+                    <td>${item.opciones}</td>
                   <td></td>
                  `;
                 document.querySelector('#tbl_persona').appendChild(nueva_fila);
@@ -89,7 +89,7 @@ async function registrar_persona() {
 
 
 
-
+//ver persona poara editar//
 async function ver_persona(id) {
     const formData= new FormData();
     formData.append('id_persona', id);
@@ -104,13 +104,18 @@ async function ver_persona(id) {
 
       json= await respuesta.json();
 if(json.status){
-    document.querySelector('#codigo').value= json.contenido.codigo;
-    document.querySelector('#nombre').value= json.contenido.nombre;
-    document.querySelector('#categoria').value= json.contenido.categoria;
-    document.querySelector('#imagen').value= json.contenido.precio;
-    document.querySelector('#proveedor').value= json.contenido.codigo;
- 
-
+    document.querySelector('#nro_identidad').value= json.contenido.nro_identidad;
+    document.querySelector('#razon_social').value= json.contenido.razon_social;
+    document.querySelector('#telefono').value= json.contenido.telefono;
+    document.querySelector('#correo').value= json.contenido.correo;
+    document.querySelector('#departamento').value= json.contenido.departamento;
+    document.querySelector('#provincia').value= json.contenido.provincia;
+    document.querySelector('#distrito').value= json.contenido.distrito;
+    document.querySelector('#codigo_postal').value= json.contenido.codigo_postal;
+    document.querySelector('#direccion').value= json.contenido.direccion;
+    document.querySelector('#rol').value= json.contenido.rol;
+    document.querySelector('#estado').value= json.contenido.estado;
+    document.querySelector('#fecha_registro').value= json.contenido.fecha_registro;
 }else{
     window.location= base_url+"persona";
 }

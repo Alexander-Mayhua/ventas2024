@@ -14,7 +14,7 @@
             <th scope="col">codigo-postal</th>
             <th scope="col">direccion</th>
             <th scope="col">rol</th>
-        
+            <th scope="col">Acciones</th>
            </tr>
         </thead>
         <tbody id="tbl_persona">

@@ -18,7 +18,7 @@ async function listar_compras() {
                   <td>${item.precio}</td>
                   <td>${item.fecha_compra}</td>
                   <td>${item.trabajador.razon_social}</td>
-                  <td></td>
+                    <td>${item.opciones}</td>
                  `;
                 document.querySelector('#tbl_compra').appendChild(nueva_fila);
             });
@@ -126,4 +126,39 @@ async function listar_trabajador() {
     } catch (e) {
         console.log("Error al cargar trabajador: " + e);
     }
+}
+
+//ver compra poara editar//
+async function ver_compra(id) {
+    const formData = new FormData();
+    formData.append('id_compra', id);
+    try {
+        let respuesta = await fetch(base_url + 'controller/compras.php?tipo=ver', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+
+        json = await respuesta.json();
+        if (json.status) {
+            document.querySelector('#producto').value = json.contenido.producto;
+            document.querySelector('#cantidad').value = json.contenido.cantidad;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#fecha_compra').value = json.contenido.fecha_compra;
+            document.querySelector('#trabajador').value = json.contenido.trabajador;
+        
+
+        } else {
+            window.location = base_url + "compras";
+        }
+
+        console.log(json);
+    } catch (error) {
+        console.log("ooops ocurrio u error" + error);
+    }
+
+
+
+
 }

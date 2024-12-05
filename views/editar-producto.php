@@ -7,6 +7,8 @@
                 </div>
                 <div class="card-body bg-light">
                     <form id="frmRegistrar" class="needs-validation" novalidate>
+                        <input type="hidden" name="id_producto" id="id_producto">
+                        <input type="hidden" name="img" id="img">
                         <div class="row g-4">
                             <!-- Código -->
                             <div class="col-12">
@@ -67,8 +69,8 @@
 
                             <!-- Botones -->
                             <div class="col-12 text-center">
-                                <button type="button" class="btn btn-primary btn-lg px-5" onclick="registrar_producto();">
-                                    <i class="fas fa-save me-2"></i>Guardar Producto
+                                <button type="button" class="btn btn-primary btn-lg px-5" onclick="actualizar_producto();">
+                                    <i class="fas fa-save me-2"></i>Actualizar Producto
                                 </button>
                                 <button type="reset" class="btn btn-secondary btn-lg px-5 ms-2">
                                     <i class="fas fa-undo me-2"></i>Limpiar
@@ -87,6 +89,6 @@
 <script>listar_proveedor();</script>
 <script>
 
-const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1']?>;
+const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];?>;
  ver_producto(id_p);
 </script>

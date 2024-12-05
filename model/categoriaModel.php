@@ -37,5 +37,17 @@ class categoriaModel{
  return $objeto;
  
     }
+
+
+
+    
+//ver categoria poara editar//
+
+public function verCategoria($id){
+    $sql = $this->conexion->query(" SELECT * FROM categoria WHERE id='$id'");
+    $sql = $sql->fetch_object();
+      return $sql;
+        }
+
 }
 ?>

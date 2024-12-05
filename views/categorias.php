@@ -6,7 +6,7 @@
             <th scope="col">Nro</th>
             <th scope="col">Nombre</th>
             <th scope="col">Detalle</th>
-          
+            <th scope="col">Acciones</th>
            </tr>
         </thead>
         <tbody id="tbl_categoria">
