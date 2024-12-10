@@ -122,7 +122,7 @@ $detalle  = $_POST['detalle'];
 $precio  = $_POST['precio'];
 $categoria  = $_POST['categoria'];
 $proveedor = $_POST['proveedor'];
-if ($codigo == "" || $nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $imagen == "" || $proveedor == "") {
+if ( $nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
     //respuesta
     $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
 } else {
@@ -131,12 +131,12 @@ if ($codigo == "" || $nombre == "" || $detalle == "" || $precio == "" || $catego
         $arr_Respuestas = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
 
         if($_FILES['imagen']['tmp_name']!=""){
-        unlink('./assets/img_producto/' .$img);
+        unlink('../assets/img_producto/' .$img);
         
 
          //cargar archivos
          $archivo = $_FILES['imagen']['tmp_name'];
-         $destino = '../assets/img_productos/';
+         $destino = '../assets/img_producto/';
          $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
          if (move_uploaded_file($archivo, $destino . '' . $id_producto.'.'.$tipoArchivo)) {
          }

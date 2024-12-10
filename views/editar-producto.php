@@ -6,7 +6,7 @@
                     <h4 class="mb-0"><i class="fas fa-plus-circle me-2"></i>Formulario de Editar producto</h4>
                 </div>
                 <div class="card-body bg-light">
-                    <form id="frmRegistrar" class="needs-validation" novalidate>
+                    <form id="frmActualizar" class="form-control" >
                         <input type="hidden" name="id_producto" id="id_producto">
                         <input type="hidden" name="img" id="img">
                         <div class="row g-4">
