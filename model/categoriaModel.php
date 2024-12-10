@@ -49,5 +49,15 @@ public function verCategoria($id){
       return $sql;
         }
 
+
+
+
+         
+  public function eliminarCategoria($id){
+    $sql = $this->conexion->query("CALL eliminarCategoria('{$id}')");
+    
+    $sql = $sql->fetch_object() ;
+    return $sql;    
+    }
 }
 ?>

@@ -5,7 +5,7 @@ protected static function obtener_vistas($vista){
     $palabras_permitidas = ['inicio','carrito','varones','mujeres','detalles', 'categorias', 'persona','compras', 'administrador','editar-producto', 'editar-persona','editar-categoria',
 'editar-compra',
     'perfil','informacion','nuevo-producto','nuevo-categoria','nueva-compra','niños','niñas','usuario','login','nuevo-usuario','productos','nuevo-persona'];
-   if(!isset($_SESSION['sesion_ventas_id'])){ //si no existe la variable sesion returna a login
+  if(!isset($_SESSION['sesion_ventas_id'])){ //si no existe la variable sesion returna a login
 
   return "login";
    }

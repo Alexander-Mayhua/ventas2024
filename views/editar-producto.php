@@ -25,6 +25,13 @@
                                     <label><i class="fas fa-tag me-2"></i>Nombre</label>
                                 </div>
                             </div>
+                            <!-- Detalle -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="detalle" name="detalle" class="form-control" placeholder="Detalle">
+                                    <label><i class="fas fa-info-circle me-2"></i>Detalle</label>
+                                </div>
+                            </div>
 
                           
                     
@@ -70,7 +77,7 @@
                             <!-- Botones -->
                             <div class="col-12 text-center">
                                 <button type="button" class="btn btn-primary btn-lg px-5" onclick="actualizar_producto();">
-                                    <i class="fas fa-save me-2"></i>Actualizar Producto
+                                    <i class="fas fa-save me-2"></i>Actualizar
                                 </button>
                                 <button type="reset" class="btn btn-secondary btn-lg px-5 ms-2">
                                     <i class="fas fa-undo me-2"></i>Limpiar

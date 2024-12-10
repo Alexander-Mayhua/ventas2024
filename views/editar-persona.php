@@ -114,8 +114,8 @@
 
                             <!-- Botones -->
                             <div class="col-12 text-center">
-                                <button type="button" class="btn btn-success btn-lg px-5" onclick="registrar_persona();">
-                                    <i class="fas fa-save me-2"></i>Registrar
+                                <button type="button" class="btn btn-success btn-lg px-5" onclick="actualizar_persona();">
+                                    <i class="fas fa-save me-2"></i>actualizar
                                 </button>
                                 <button type="reset" class="btn btn-secondary btn-lg px-5 ms-2">
                                     <i class="fas fa-undo me-2"></i>Limpiar

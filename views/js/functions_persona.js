@@ -126,3 +126,48 @@ if(json.status){
         console.log("ooops ocurrio u error"+error);
     }
 }
+
+
+
+//elmnar persona
+
+async function eliminar_persona(id) {
+    swal({
+        title: "Realmente desea eliminar el persona?",
+        text: "",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true
+
+    }).then((willDelete) => {
+        if (willDelete) {
+            fnt_eliminar(id);
+        }
+    })
+}
+
+async function fnt_eliminar(id) {
+    // alert("categoria elminado: id=" + id);
+
+    const formData = new FormData();
+    formData.append('id_persona', id);
+    try {
+        let respuesta = await fetch(base_url + 'controller/persona.php?tipo=eliminar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            //  alert("eliminado correctamente");
+            swal("eliminar", "eliminado correctamente", "success");
+            document.querySelector('#fila' + id).remove();
+        } else {
+          //  alert("error al eliminar");
+            swal("eliminar", "Error al eliminar  categoria", "warning");
+        }
+    } catch (e) {
+        console.log("ocurrio un error" + e);
+    }
+}

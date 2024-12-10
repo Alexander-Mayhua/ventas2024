@@ -61,6 +61,13 @@ public function actualizarProducto($id,  $nombre, $detalle, $precio,  $categoria
     return $sql;    
     }
     
+    
+  public function eliminarProducto($id){
+    $sql = $this->conexion->query("CALL eliminarProducto('{$id}')");
+    
+    $sql = $sql->fetch_object() ;
+    return $sql;    
+    }
+  }
 
-}
 ?>

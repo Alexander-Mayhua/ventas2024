@@ -125,6 +125,18 @@ if ($tipo == "ver") {
   
   }
 
+  if ($tipo == "eliminar") {
+    $id_persona = $_POST['id_persona'];
+    $arr_Respuesta = $objPersona->eliminarPersona($id_persona);
+    /*print_r($arr_Respuesta);*/
+
+    if (empty($arr_Respuesta)) {
+        $response = array('status' => false);
+    } else {
+        $response = array('status' => true);
+    }
+    echo json_encode($response);
+}
 
 
 ?>

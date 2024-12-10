@@ -88,4 +88,18 @@ if ($tipo == "ver") {
   }
 
 
+
+  if ($tipo == "eliminar") {
+    $id_categoria = $_POST['id_categoria'];
+    $arr_Respuesta = $objCategoria->eliminarCategoria($id_categoria);
+    /*print_r($arr_Respuesta);*/
+
+    if (empty($arr_Respuesta)) {
+        $response = array('status' => false);
+    } else {
+        $response = array('status' => true);
+    }
+    echo json_encode($response);
+}
+
 ?>
