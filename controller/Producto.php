@@ -161,3 +161,5 @@ if ($tipo == "eliminar") {
     }
     echo json_encode($response);
 }
+
+?>
