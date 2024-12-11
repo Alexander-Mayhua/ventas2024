@@ -22,9 +22,9 @@ if ($tipo == "listar") {
       $id_persona = $arr_personas[$i]->id;
      /* $persona = $arr_personas[$i]->nombre;*/
     //localhost/editar-persona/
-    $opciomes = '<a href="'.BASE_URL.'editar-persona/'. $id_persona.'">Editar </a>
+    $opciomes = '<a href="'.BASE_URL.'editar-persona/'. $id_persona.'" class="btn btn-primary btn-sm">Editar </a>
             
-    <button onclick="eliminar_persona('.$id_persona.');">Eliminar</button>
+    <button class="btn btn-danger btn-sm" onclick="eliminar_persona('.$id_persona.');">Eliminar</button>
     ';
       $arr_personas[$i]->opciones = $opciomes;
     }

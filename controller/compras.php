@@ -105,9 +105,9 @@ if ($tipo == "listar") {
             // Generar las opciones para cada compra (por ejemplo, editar)
             $id_compra = $arr_compras[$i]->id;
          //localhost/editar-compra/
-         $opciomes = '<a href="'.BASE_URL.'editar-compra/'. $id_compra.'">Editar </a>
+         $opciomes = '<a href="'.BASE_URL.'editar-compra/'. $id_compra.'" class="btn btn-primary btn-sm">Editar </a>
             
-         <button onclick="eliminar_compra('.$id_compra.');">Eliminar</button>
+         <button class="btn btn-danger btn-sm"onclick="eliminar_compra('.$id_compra.');">Eliminar</button>
          ';
             $arr_compras[$i]->opciones = $opciomes;
         }

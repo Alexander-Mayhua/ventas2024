@@ -22,9 +22,9 @@ if ($tipo == "listar") {
 
       $id_categoria = $arr_categorias[$i]->id;
       $categoria = $arr_categorias[$i]->nombre;
-      $opciomes = '<a href="'.BASE_URL.'editar-categoria/'. $id_categoria.'">Editar </a>
+      $opciomes = '<a href="'.BASE_URL.'editar-categoria/'. $id_categoria.'" class="btn btn-primary btn-sm">Editar </a>
             
-      <button onclick="eliminar_categoria('.$id_categoria.');">Eliminar</button>
+      <button class="btn btn-danger btn-sm"onclick="eliminar_categoria('.$id_categoria.');">Eliminar</button>
       ';
       $arr_categorias[$i]->opciones = $opciomes;
     }
