@@ -124,7 +124,7 @@ if ($tipo == "listar") {
 
 if ($tipo == "ver") {
     $id_compra = $_POST['id_compra'];
-    $arr_Respuesta =$objCompras-> verCompra($id_compra);
+    $arr_Respuesta =$objCompra-> verCompra($id_compra);
     /*print_r($arr_Respuesta);*/
     
     if(empty($arr_Respuesta)){

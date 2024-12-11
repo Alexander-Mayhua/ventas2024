@@ -1,5 +1,5 @@
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" style="margin: 25px">
+<form action="" id="frmActualizar" style="margin: 25px">
 <div>
         <label for=""> producto: </label>
              <select name="producto" id="producto" class="form-control" require >

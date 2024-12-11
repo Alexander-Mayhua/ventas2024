@@ -142,11 +142,11 @@ async function ver_compra(id) {
 
         json = await respuesta.json();
         if (json.status) {
-            document.querySelector('#producto').value = json.contenido.producto;
+            document.querySelector('#producto').value = json.contenido.id_producto;
             document.querySelector('#cantidad').value = json.contenido.cantidad;
             document.querySelector('#precio').value = json.contenido.precio;
             document.querySelector('#fecha_compra').value = json.contenido.fecha_compra;
-            document.querySelector('#trabajador').value = json.contenido.trabajador;
+            document.querySelector('#trabajador').value = json.contenido.id_trabajador;
         
 
         } else {

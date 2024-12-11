@@ -30,7 +30,7 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>inicio" style="color: #000;">INICIO</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL ?>carrito" style="color: #000;">CARRITO </a>
                         </li>
@@ -58,14 +58,26 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2 " type="search" placeholder="Buscar Información"
                             aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-
-                        <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block">
-                            <span class="ms-1">Cerrar Sesión</span>
-                        </a>
+                        <button class="btn btn-outline-success " style="margin-right: 10px;" type="submit">Buscar</button>
 
 
-                        <button class="btn btn-outline-success" type="submit"><?php echo $_SESSION['sesion_ventas_nombres'] ?></button>
+
+                        <li class="nav-item dropdown text-white text-decoration-none d-none d-md-block" style="margin-right: 80px;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="color: #000;">
+
+                                <button class="btn btn-outline-success" type="submit"><?php echo $_SESSION['sesion_ventas_nombres'] ?></button>
+
+                            </a>
+                            <ul class="dropdown-menu  " style="width: 30px;" >
+                                <li><a class="text-white text-decoration-none d-none d-md-block "  href="<?php echo BASE_URL ?>administrador">administrador</a></li>
+<br>
+                                <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block">
+                                    <span class="ms-1">Cerrar Sesión</span>
+                                </a>
+
+                            </ul>
+                        </li>
 
                     </form>
 

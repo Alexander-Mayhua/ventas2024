@@ -107,32 +107,36 @@
 </style>
 
 
-<div class="main-content m-0">
-    <div class="header">
-        <h1>Panel de Administrador</h1>
-        <input type="text" class="search-bar" placeholder="Buscar...">
-    </div>
+</head>
+<body>
+    <div class="main-content" style="min-height: 500px;">
+        <div class="header">
+            <h1>Panel de Administrador</h1>
+            <input type="text" class="search-bar" placeholder="Buscar...">
+        </div>
 
-    <div class="dashboard-cards">
-        <div class="card">
-            <div class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>productos" style="color: #000;">PRODUCTOS</a>
+        <div class="dashboard-cards" style="height: 200px; text-align: center;">
+            <div class="card">
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>productos">PRODUCTOS</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-        <div class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>compras" style="color: #000;">COMPRAS</a>
+            <div class="card">
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>compras">COMPRAS</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-        <div class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>categorias" style="color: #000;">CATEGORIAS</a>
+            <div class="card">
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>categorias">CATEGORIAS</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-        <div class="nav-item">
-                <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>persona" style="color: #000;">PERSONA</a>
+            <div class="card">
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>persona">PERSONA</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>
