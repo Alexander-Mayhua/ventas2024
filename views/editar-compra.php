@@ -1,5 +1,6 @@
 <div class="container form-nproduct">
 <form action="" id="frmActualizar" style="margin: 25px">
+<input type="hidden" name="id_compra" id="id_compra">
 <div>
         <label for=""> producto: </label>
              <select name="producto" id="producto" class="form-control" require >
@@ -27,7 +28,7 @@
     </div>
  
     <br>
-    <button type="button" class="btn btn-success" onclick="registrar_compra();" >registrar</button>
+    <button type="button" class="btn btn-success" onclick="actualizar_compra();" >Actualizar</button>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_compra.js"></script>

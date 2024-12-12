@@ -90,6 +90,10 @@
         border-radius: 5px;
         width: 300px;
     }
+    .nav-link{
+        color: #3498db;
+       
+    }
 
     @media (max-width: 768px) {
         .sidebar {
@@ -115,25 +119,25 @@
             <input type="text" class="search-bar" placeholder="Buscar...">
         </div>
 
-        <div class="dashboard-cards" style="height: 200px; text-align: center;">
+        <div class="dashboard-cards" style="height: 200px; text-align: center; ">
             <div class="card">
-                <div class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>productos">PRODUCTOS</a>
+                <div class="nav-item" >
+                    <a class="nav-link" style="height: 150px; text-align: center; display: flex; align-items:center; justify-content:center;" aria-current="page" href="<?php echo BASE_URL ?>productos">PRODUCTOS</a>
                 </div>
             </div>
             <div class="card">
                 <div class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>compras">COMPRAS</a>
+                    <a class="nav-link" style="height: 150px; text-align: center; display: flex; align-items:center; justify-content:center;" aria-current="page" href="<?php echo BASE_URL ?>compras">COMPRAS</a>
                 </div>
             </div>
             <div class="card">
                 <div class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>categorias">CATEGORIAS</a>
+                    <a class="nav-link" style="height: 150px; text-align: center; display: flex; align-items:center; justify-content:center;" aria-current="page" href="<?php echo BASE_URL ?>categorias">CATEGORIAS</a>
                 </div>
             </div>
             <div class="card">
                 <div class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo BASE_URL ?>persona">PERSONA</a>
+                    <a class="nav-link" style="height: 150px; text-align: center; display: flex; align-items:center; justify-content:center;" aria-current="page" href="<?php echo BASE_URL ?>persona">PERSONA</a>
                 </div>
             </div>
         </div>

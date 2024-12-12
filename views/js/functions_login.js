@@ -20,7 +20,7 @@ async function iniciar_sesion() {
         json = await respuesta.json();
         if (json.status) {
             // swal("iniciar_sesion", json.mensaje, "success");
-            location.replace(base_url + "nuevo-producto");
+            location.replace(base_url + "inicio");
         } else {
             swal("iniciar sesion", json.mensaje, "error");
         }

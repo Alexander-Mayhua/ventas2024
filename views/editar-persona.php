@@ -89,21 +89,8 @@
                                 </div>
                             </div>
 
-                            <!-- Password -->
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
-                                    <label><i class="fas fa-lock me-2"></i>Contraseña</label>
-                                </div>
-                            </div>
-
-                            <!-- Estado -->
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" id="estado" name="estado" class="form-control" placeholder="Estado">
-                                    <label><i class="fas fa-toggle-on me-2"></i>Estado</label>
-                                </div>
-                            </div>
+                        
+                
 
                             <!-- Fecha Registro -->
                             <div class="col-12">

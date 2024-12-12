@@ -104,6 +104,7 @@ async function ver_persona(id) {
 
       json= await respuesta.json();
 if(json.status){
+    document.querySelector('#id_persona').value= json.contenido.id;
     document.querySelector('#nro_identidad').value= json.contenido.nro_identidad;
     document.querySelector('#razon_social').value= json.contenido.razon_social;
     document.querySelector('#telefono').value= json.contenido.telefono;
@@ -140,6 +141,11 @@ async function actualizar_persona() {
             body: datos
         });
         json = await respuesta.json();
+        if (json.status) {
+            swal("Actualizar", json.mensaje, "success");
+        } else {
+            swal("Actualizar", json.mensaje, "error");
+        }
         console.log(json);
     } catch (e) {
 

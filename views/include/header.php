@@ -70,10 +70,10 @@
 
                             </a>
                             <ul class="dropdown-menu  " style="width: 30px;" >
-                                <li><a class="text-white text-decoration-none d-none d-md-block "  href="<?php echo BASE_URL ?>administrador">administrador</a></li>
+                                <li><a class="text-white text-decoration-none d-none d-md-block  "  style=" text-align: center; "  href="<?php echo BASE_URL ?>administrador">administrador</a></li>
 <br>
-                                <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block">
-                                    <span class="ms-1">Cerrar Sesión</span>
+                                <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block"  style=" text-align: center; ">
+                                    <span class="ms-1" >Cerrar Sesión</span>
                                 </a>
 
                             </ul>

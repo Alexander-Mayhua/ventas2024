@@ -26,7 +26,13 @@
                                 </div>
                             </div>
                      
-                        
+                         <!-- Detalle -->
+                         <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="detalle" name="detalle" class="form-control" placeholder="Detalle">
+                                    <label><i class="fas fa-info-circle me-2"></i>Detalle</label>
+                                </div>
+                            </div>
                             <!-- Precio -->
                             <div class="col-12">
                                 <div class="form-floating">

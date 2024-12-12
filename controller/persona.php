@@ -150,25 +150,14 @@ print_r($_FILES['imagen']['tpm_name']);*/
         $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
     } else {
         $arrPersona = $objPersona->actualizarPersona( $id_persona, $nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal,$direccion,$rol);
-        if ($arrPersona->id > 0) {
+        if ($arrPersona->p_id > 0) {
             $arr_Respuestas = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
 
-            if ($_FILES['imagen']['tmp_name'] != "") {
-                unlink('../assets/img_producto/' . $img);
-
-
-                //cargar archivos
-                $archivo = $_FILES['imagen']['tmp_name'];
-                $destino = '../assets/img_producto/';
-                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
-                if (move_uploaded_file($archivo, $destino . '' . $id_producto . '.' . $tipoArchivo)) {
-                }
-            }
         } else {
-            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+            $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al actualizar persona');
         }
     }
-    echo json_encode($arr_Respuesta);
+    echo json_encode($arr_Respuestas);
 }
 
 

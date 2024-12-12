@@ -121,12 +121,12 @@ print_r($_FILES['imagen']['tpm_name']);*/
     $precio  = $_POST['precio'];
     $categoria  = $_POST['categoria'];
     $proveedor = $_POST['proveedor'];
-    if ($nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
+    if ( $id_producto == "" || $img == "" || $nombre == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
         //respuesta
         $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
     } else {
         $arrProducto = $objProducto->actualizarProducto($id_producto, $nombre, $detalle, $precio,$categoria,$proveedor);
-        if ($arrProducto->id > 0) {
+        if ($arrProducto->p_id > 0) {
             $arr_Respuestas = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
 
             if ($_FILES['imagen']['tmp_name'] != "") {
@@ -141,10 +141,10 @@ print_r($_FILES['imagen']['tpm_name']);*/
                 }
             }
         } else {
-            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+            $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al actualizar producto');
         }
     }
-    echo json_encode($arr_Respuesta);
+    echo json_encode($arr_Respuestas);
 }
 
 

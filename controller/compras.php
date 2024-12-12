@@ -140,10 +140,32 @@ if ($tipo == "ver") {
 
 
 
-    if ($tipo == "Actualzar") {
+    if ($tipo == "actualizar") {
+        /*print_r($_POST);
+    print_r($_FILES['imagen']['tpm_name']);*/
+    
+        $id_compra  = $_POST['id_compra'];
+        $producto  = $_POST['producto'];
+        $cantidad  = $_POST['cantidad'];
+        $precio  = $_POST['precio'];
+        $fecha_compra  = $_POST['fecha_compra'];
+        $trabajador = $_POST['trabajador'];
         
+        if ($producto == "" || $cantidad == "" || $precio == "" || $fecha_compra  == "" || $trabajador == "") {
+            //respuesta
+            $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
+        } else {
+            $arrCompra = $objCompra->actualizarCompra($id_compra, $producto, $cantidad ,$precio, $fecha_compra, $trabajador);
+            if ($arrCompra->p_id > 0) {
+                $arr_Respuestas = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+    
+              
+            } else {
+                $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al actualizar compra');
+            }
+        }
+        echo json_encode($arr_Respuestas);
     }
-
 
 
 

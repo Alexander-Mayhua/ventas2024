@@ -60,26 +60,23 @@ class comprasModel
 
 
 
+    public function actualizarCompra($id,  $producto, $cantidad, $precio, $fecha_compra, $trabajador)
+    {
+        $sql = $this->conexion->query("CALL actualizarCompra('{$id}','{$producto}','{$cantidad}','{$precio}',
+                                                     '{$fecha_compra}','{$trabajador}')");
+
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-    public function eliminarCompra($id){
+    public function eliminarCompra($id)
+    {
         $sql = $this->conexion->query("CALL eliminarCompra('{$id}')");
-        
-        $sql = $sql->fetch_object() ;
-        return $sql;    
-        }
-      
-    
+
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
 }

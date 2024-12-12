@@ -89,6 +89,32 @@ if ($tipo == "ver") {
 
 
 
+  if ($tipo == "actualizar") {
+    /*print_r($_POST);
+print_r($_FILES['imagen']['tpm_name']);*/
+
+    $id_categoria  = $_POST['id_categoria'];
+    $nombre  = $_POST['nombre'];
+    $detalle  = $_POST['detalle'];
+ 
+    if ($nombre == "" || $detalle == "") {
+        //respuesta
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'error,campos vacios');
+    } else {
+        $arrCategorias = $objCategoria->actualizarCategoria($id_categoria, $nombre, $detalle);
+        if ($arrCategorias->p_id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+        }
+    }
+    echo json_encode($arr_Respuesta);
+}
+
+
+
+
   if ($tipo == "eliminar") {
     $id_categoria = $_POST['id_categoria'];
     $arr_Respuesta = $objCategoria->eliminarCategoria($id_categoria);

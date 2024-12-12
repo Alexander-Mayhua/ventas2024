@@ -142,6 +142,7 @@ async function ver_compra(id) {
 
         json = await respuesta.json();
         if (json.status) {
+            document.querySelector('#id_compra').value = json.contenido.id;
             document.querySelector('#producto').value = json.contenido.id_producto;
             document.querySelector('#cantidad').value = json.contenido.cantidad;
             document.querySelector('#precio').value = json.contenido.precio;
@@ -161,6 +162,30 @@ async function ver_compra(id) {
 
 
 
+}
+
+
+
+
+async function actualizar_compra() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/compras.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Actualizar", json.mensaje, "success");
+        } else {
+            swal("Actualizar", json.mensaje, "error");
+        }
+        console.log(json);
+    } catch (e) {
+
+    }
 }
 
 

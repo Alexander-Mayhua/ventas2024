@@ -87,6 +87,7 @@ async function ver_categoria(id) {
 
         json = await respuesta.json();
         if (json.status) {
+            document.querySelector('#id_categoria').value = json.contenido.id;
             document.querySelector('#nombre').value = json.contenido.nombre;
             document.querySelector('#detalle').value = json.contenido.detalle;
 
@@ -100,6 +101,31 @@ async function ver_categoria(id) {
         console.log("ooops ocurrio u error" + error);
     }
 }
+
+
+
+async function actualizar_categoria() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/categoria.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Actualizar", json.mensaje, "success");
+        } else {
+            swal("Actualizar", json.mensaje, "error");
+        }
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+
+
 
 
 //elmnar categoria
