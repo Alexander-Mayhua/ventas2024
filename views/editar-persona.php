@@ -6,8 +6,9 @@
                     <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Formulario de Editar Persona</h4>
                 </div>
                 <div class="card-body bg-light">
-                    <form id="frmRegistrar" class="needs-validation" novalidate>
-                        <div class="row g-4">
+                    <form id="frmActualizar" class="needs-validation" novalidate>
+                    <input type="hidden" name="id_persona" id="id_persona">
+                    <div class="row g-4">
                             <!-- Nro Identidad -->
                             <div class="col-12">
                                 <div class="form-floating">

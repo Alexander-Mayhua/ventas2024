@@ -129,6 +129,27 @@ if(json.status){
 
 
 
+
+async function actualizar_persona() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/persona.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+
+
+
+
+
 //elmnar persona
 
 async function eliminar_persona(id) {

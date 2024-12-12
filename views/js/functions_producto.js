@@ -150,7 +150,6 @@ async function ver_producto(id) {
             document.querySelector('#id_producto').value = json.contenido.id;
             document.querySelector('#codigo').value = json.contenido.codigo;
             document.querySelector('#nombre').value = json.contenido.nombre;
-            document.querySelector('#detalle').value = json.contenido.detalle;
             document.querySelector('#precio').value = json.contenido.precio;
             document.querySelector('#categoria').value = json.contenido.id_categoria;
             document.querySelector('#proveedor').value = json.contenido.id_proveedor;
@@ -219,7 +218,7 @@ async function fnt_eliminar(id) {
             document.querySelector('#fila' + id).remove();
         } else {
           //  alert("error al eliminar");
-            swal("eliminar", "Error al eliminar  producto", "warning");
+          swal("Eliminar", json.message || "No se puede eliminar el producto porque está relacionado con otra tabla.", "warning");
         }
     } catch (e) {
         console.log("ocurrio un error" + e);

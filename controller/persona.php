@@ -71,7 +71,7 @@ if ($tipo == "registrar") {
        
 
 
-        if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $telefono==""|| $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
+        if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
 
         || $codigo_postal==""|| $direccion==""|| $rol==""|| $secure_password==""|| $estado==""|| $fecha_registro=="") {
 
@@ -124,6 +124,57 @@ if ($tipo == "ver") {
   echo json_encode($response);
   
   }
+
+
+
+  if ($tipo == "actualizar") {
+    /*print_r($_POST);
+print_r($_FILES['imagen']['tpm_name']);*/
+
+    $id_persona  = $_POST['id_persona'];
+    $nro_identidad  = $_POST['nro_identidad'];
+    $razon_social  = $_POST['razon_social'];
+    $telefono  = $_POST['telefono'];
+    $correo  = $_POST['correo'];
+    $departamento	  = $_POST['departamento'];
+    $provincia = $_POST['provincia'];
+    $distrito = $_POST['distrito'];
+    $codigo_postal = $_POST['codigo_postal'];
+    $direccion = $_POST['direccion'];
+    $rol = $_POST['rol'];
+    if ($nro_identidad==""|| $razon_social=="" || $telefono=="" || $correo=="" || $departamento==""|| $provincia==""|| $distrito=="" 
+
+    || $codigo_postal==""|| $direccion==""|| $rol=="" ) {
+
+        //respuesta
+        $arr_Respuestas = array('status' => false, 'mensaje' => 'error,campos vacios');
+    } else {
+        $arrPersona = $objPersona->actualizarPersona( $id_persona, $nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal,$direccion,$rol);
+        if ($arrPersona->id > 0) {
+            $arr_Respuestas = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+
+            if ($_FILES['imagen']['tmp_name'] != "") {
+                unlink('../assets/img_producto/' . $img);
+
+
+                //cargar archivos
+                $archivo = $_FILES['imagen']['tmp_name'];
+                $destino = '../assets/img_producto/';
+                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+                if (move_uploaded_file($archivo, $destino . '' . $id_producto . '.' . $tipoArchivo)) {
+                }
+            }
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+        }
+    }
+    echo json_encode($arr_Respuesta);
+}
+
+
+
+
+
 
   if ($tipo == "eliminar") {
     $id_persona = $_POST['id_persona'];

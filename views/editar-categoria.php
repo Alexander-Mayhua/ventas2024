@@ -1,5 +1,5 @@
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" style="margin: 25px">
+<form action="" id="frmActualizar" style="margin: 25px">
     <div>
         <label for=""> nombre: </label>
             <input type="text" id="nombre" name="nombre" class="form-control" >
